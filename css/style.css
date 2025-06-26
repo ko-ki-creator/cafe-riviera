@@ -342,10 +342,6 @@ PC
 
 
 /* -----------------------------------------ニュース */
-.news-container {
-
-}
-
 .news-content {
     display: flex;
     gap: 70px;
@@ -370,12 +366,14 @@ PC
         p {
             color: var(--light-brown);
             background-color: #FFF9F3;
+            padding: 5px 10px;
         }
 
         h4 {
             color: var(--light-brown);
             font-size: 21px;
             background-color: #FFF9F3;
+            padding: 5px 10px;
         }
     }
 }
@@ -503,6 +501,36 @@ PC
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------------
 SP
 --------------------------------------------------- */
@@ -519,5 +547,174 @@ SP
     .sp {
         display: block;
     }
+
+
+
+    /* セクションタイトル */
+    .heading {
+
+        h3 {
+            font-size: 36px;
+        }
+    }
+
+
+
+    /* -----------------------------------------カフェ・リヴィエラとは */
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-content {
+        width: 100%;
+
+        img {
+            margin: 0 auto;
+        }
+
+        p {
+            width: 70%;
+            top: 70%;
+        }
+    }
+
+    .about-content-right {
+        margin-bottom: 100px;
+    }
+
+
+
+    /* -----------------------------------------こだわり */
+    .feature-container {
+        flex-direction: column;
+        gap: 30px;
+
+        .pan {
+            display: none;
+        }
+
+        .cafe {
+            display: none;
+        }
+    }
+
+    .feature-content-second {
+        margin-top: 0;
+    }
+
+    .feature-content-third {
+        margin-top: 0;
+    }
+
+
+
+    /* -----------------------------------------メニュー */
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .menu-content {
+        width: 100%;
+    }
+
+
+
+
+    /* -----------------------------------------ギャラリー */
+    .gallery-container {
+        height: 1040px;
+    }
+
+    .photo1 {
+        width: 247px;
+        z-index: 10;
+    }
+
+    .photo2 {
+        top: 120px;
+        left: 0;
+        width: 147px;
+        z-index: 30;
+    }
+
+    .photo3 {
+        top: 280px;
+        left: -30px;
+        width: 325px;
+        z-index: 20;
+    }
+
+    .photo4 {
+        top: 650px;
+        left: 30%;
+        z-index: 30;
+        width: 267px;
+    }
+
+    .photo5 {
+        left: -50px;
+        z-index: 20;
+        width: 420px;
+    }
+
+
+
+    /* -----------------------------------------ニュース */
+    .news-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .news-group {
+        margin-top: 0;
+
+        .news-title {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 0 15px;
+
+            p {
+                width: fit-content;
+                margin-right: auto;
+            }
+
+            h4 {
+                width: fit-content;
+                margin-right: auto;
+            }
+        }
+
+        > p {
+            padding: 0 15px 30px 15px;
+        }
+    }
+
+
+
+    /* -----------------------------------------アクセス */
+    .access-container {
+        flex-direction: column;
+
+        iframe {
+            width: 100%;
+        }
+    }
+
+    .access-content {
+        width: 100%;
+    }
+
+
+
+    /* -----------------------------------------フッター */
+    .footer-wrapper {
+        padding: 0 15px;
+    }
+
+    .footer-inner {
+        margin-bottom: 40px;
+    }
+
 
 }
