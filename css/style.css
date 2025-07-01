@@ -19,6 +19,7 @@ body {
     --light-brown: #C48E29;
 
     --font-arvo: "Arvo", serif;
+    --font-noto: "Noto Sans JP", sans-serif;
 }
 
 button {
@@ -67,7 +68,7 @@ h2, h3 {
 #gallery,
 #news,
 #access {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 50px;
 }
 
 /* セクションタイトル */
@@ -152,6 +153,332 @@ PC
 
 
 /* -----------------------------------------ヘッダー */
+.header-wrapper {
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+}
+
+.header-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    clip-path: path('M 0 0, L 142 0, L 142 140, L 120 175, L 90 192, L 90 800, L 0 800, Z');
+    z-index: 99;
+    position: relative;
+
+    > a {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 40%;
+    left: 20px;
+    z-index: 99;
+
+    span {
+        width: 100%;
+        height: 1px;
+        background-color: var(--light-brown);
+        margin: 10px auto;
+        position: relative;
+        transition: all ease .4s;
+        display: block;
+    }
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    margin: 10px auto;
+}
+
+.hamburger span:nth-child(3) {
+    top: 0;
+}
+
+/* ハンバーガーメニュークリック後のスタイル */
+.hamburger.active span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: -11px;
+    transform: rotate(-45deg);
+}
+
+.header-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-cta,
+.reserve-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90px;
+    padding: 30px 0;
+    transition-duration: .4s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    p {
+        color: var(--white);
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        letter-spacing: 0.2em;
+    }
+}
+
+.menu-cta {
+    background-color: var(--dark-brown);
+}
+
+.reserve-cta {
+    background-color: var(--light-brown);
+}
+
+
+/* ナビゲーション展開 */
+.navigation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45vw;
+    height: 100%;
+    transform: translateX(-100%);
+    background-color: var(--white);
+    transition: ease .5s;
+    z-index: 100;
+    overflow-y: scroll;
+}
+
+.navigation-container.active {
+    transform: translate(0);
+}
+
+.nav-sp {
+    margin-top: 90px;
+
+    .header-nav-sns {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        a {
+            img {
+                width: 33px;
+                min-height: 33px;
+            }
+        }
+    }
+}
+
+.nav-list-sp {
+    width: 100%;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+
+        a {
+            color: var(--brack);
+            font-size: 45px;
+            font-family: var(--font-arvo);
+            width: 100%;
+
+            &:hover {
+                color: var(--light-brown);
+                transition-duration: .3s;
+            }
+        }
+    }
+}
+
+.header-nav-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+
+    .sp-menu-cta,
+    .sp-reserve-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 345px;
+        margin: 0 auto;
+        color: var(--white);
+        padding: 15px 35px;
+        border-radius: 30px;
+        transition-duration: .4s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        img {
+            width: 24px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+    }
+
+    .sp-menu-cta {
+        background-color: var(--dark-brown);
+    }
+
+    .sp-reserve-cta {
+        background-color: var(--light-brown);
+    }
+}
+
+
+
+
+
+
+
+
+/* -----------------------------------------ファーストビュー */
+.first-view {
+    background-image: url(/images/fv-back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.fv-wrapper {
+    height: 100%;
+}
+
+.fv-inner {
+    position: relative;
+    height: 100%;
+
+    h2 {
+        color: var(--white);
+        font-size: 45px;
+        font-family: var(--font-noto);
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        letter-spacing: 0.1em;
+        line-height: 1.5em;
+        position: absolute;
+        top: 40px;
+        right: 90px;
+        height: 500px;
+    }
+
+    h3 {
+        color: var(--white);
+        font-size: 30px;
+        font-family: var(--font-noto);
+        font-weight: 400;
+        line-height: 1.3em;
+        position: absolute;
+        bottom: 40px;
+        left: 180px;
+        width: fit-content;
+    }
+
+    > p {
+        background-image: url(/images/fv-white-back.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 620px;
+        height: 170px;
+        color: var(--dark-brown);
+        padding: 50px 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.fv-cta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 30px;
+    display: none;
+
+    .fv-menu-cta,
+    .fv-reserve-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 345px;
+        margin: 0 auto;
+        color: var(--white);
+        padding: 15px 35px;
+        border-radius: 30px;
+        transition-duration: .4s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        img {
+            width: 24px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+    }
+
+    .fv-menu-cta {
+        background-color: var(--dark-brown);
+    }
+
+    .fv-reserve-cta {
+        background-color: var(--light-brown);
+    }
+}
+
+
 
 
 
@@ -555,6 +882,105 @@ SP
 
         h3 {
             font-size: 36px;
+        }
+    }
+
+
+
+    /* -----------------------------------------ヘッダー */
+    .header-wrapper {
+        width: 100%;
+        height: 90px;
+        background-color: var(--white);
+    }
+
+    .header-inner {
+        width: 100%;
+        clip-path: path('M 0 0, L 767 0, L 767 90, L 0 90, Z');
+
+        > a {
+            top: 20px;
+            left: 15px;
+            width: 50px;
+        }
+    }
+
+    .hamburger {
+        top: 20px;
+        left: auto;
+        right: 15px;
+    }
+
+    .menu-cta,
+    .reserve-cta {
+        display: none;
+    }
+
+    /* ナビゲーション展開 */
+    .navigation-container {
+        width: 100vw;
+        transform: translateX(100%);
+    }
+
+    .nav-list-sp {
+        .nav-item {
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .header-nav-btn {
+        display: block;
+
+        .sp-menu-cta {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+    /* -----------------------------------------ファーストビュー */
+    .first-view {
+        width: 100%;
+        height: 950px;
+        margin-bottom: 50px;
+        padding-top: 90px;
+    }
+
+    .fv-inner {
+
+        h2 {
+            font-size: 30px;
+            top: 20px;
+            right: 15px;
+            height: fit-content;
+        }
+
+        h3 {
+            font-size: 16px;
+            bottom: 45%;
+            left: 15px;
+            width: fit-content;
+        }
+
+        > p {
+            background-position: left;
+            width: 100%;
+            height: 170px;
+            padding: 30px 40px 35px 70px;
+            bottom: 24%;
+            right: 0;
+        }
+    }
+
+    .fv-cta {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+
+        .fv-menu-cta {
+            margin-bottom: 10px;
         }
     }
 

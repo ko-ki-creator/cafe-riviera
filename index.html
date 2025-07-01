@@ -9,620 +9,715 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <!-- カフェ・リヴィエラとは？ -->
-    <section class="about" id="about">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
-                    </h2>
-                    <h3>ABOUT</h3>
-                    <p>カフェ・リヴィエラとは？</p>
-                </div>
-                <div class="about-container">
-                    <div class="about-content">
-                        <img src="images/about1.png" alt="">
-                        <p>
-                            カフェ・リヴィエラは、都会の喧騒から離れ、穏やかな時間を提供する場所です。木の温もりを感じるインテリアと、ナチュラルな色合いでまとめられた店内は、訪れるすべての人に心の平穏をもたらします。
-                        </p>
-                    </div>
-                    <div class="about-content-right">
-                        <img src="images/about2.png" alt="">
-                        <p>
-                            私たちは、素材にこだわり、シンプルでありながら豊かな味わいを大切にした料理を提供しています。コーヒーはオーガニックの豆を使用し、バリスタが一杯一杯丁寧に淹れています。
-                        </p>
-                    </div>
+    <header>
+        <!-- ヘッダー -->
+        <div class="header-wrapper">
+            <div class="header-inner">
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+
+                <!-- ハンバーガーメニュー -->
+                <button class="hamburger" id="js-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="header-cta">
+                    <a href="#menu" class="menu-cta">
+                        <img src="images/menu-book.png" alt="">
+                        <p>メニューをみる</p>
+                    </a>
+                    <a href="#reserve" class="reserve-cta">
+                        <img src="images/schedule.png" alt="">
+                        <p>ご予約</p>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- こだわり -->
-    <section class="feature">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
-                    </h2>
-                    <h3>FEATURE</h3>
-                    <p>カフェ・リヴィエラのこだわり</p>
-                </div>
-                <div class="feature-container">
-                    <div class="feature-content">
-                        <div class="feature-group">
-                            <img src="images/feature1.png" alt="">
-                            <h4>新鮮な素材</h4>
-                        </div>
-                        <p>
-                            カフェ・リヴィエラでは、地元の農家から直送される新鮮な食材を使用しています。どのメニューにも、素材本来の味を活かした調理法を取り入れています。
-                        </p>
+        <!-- ナビゲーション -->
+        <section class="navigation">
+            <div class="navigation-container" id="js-nav">
+                <nav class="nav-sp">
+                    <ul class="nav-list-sp">
+                        <li class="nav-item"><a href="#">HOME</a></li>
+                        <li class="nav-item"><a href="#about">ABOUT</a></li>
+                        <li class="nav-item"><a href="#feature">FEATURE</a></li>
+                        <li class="nav-item"><a href="#menu">MENU</a></li>
+                        <li class="nav-item"><a href="#gallery">GALLERY</a></li>
+                        <li class="nav-item"><a href="#news">NEWS</a></li>
+                        <li class="nav-item"><a href="#access">ACCESS</a></li>
+                    </ul>
+                    <div class="header-nav-sns">
+                        <a href=""><img src="images/facebook.png" alt=""></a>
+                        <a href=""><img src="images/x.png" alt=""></a>
+                        <a href=""><img src="images/instagram.png" alt=""></a>
                     </div>
-                    <div class="feature-content feature-content-second">
-                        <div class="feature-group">
-                            <img src="images/feature2.png" alt="">
-                            <h4>自家焙煎コーヒー</h4>
-                        </div>
-                        <p>
-                            コーヒー豆は自家焙煎で、最もフレッシュな状態で提供します。豊かな香りと深い味わいを追求し、訪れるたびに新しい発見があります。
-                        </p>
+                    <div class="header-nav-btn">
+                        <a href="#menu" class="sp-menu-cta">
+                            <img src="images/menu-book.png" alt="">
+                            <p>メニューをみる</p>
+                        </a>
+                        <a href="#reserve" class="sp-reserve-cta">
+                            <img src="images/schedule.png" alt="">
+                            <p>ご予約</p>
+                        </a>
                     </div>
-                    <div class="feature-content feature-content-third">
-                        <div class="feature-group">
-                            <img src="images/feature3.png" alt="">
-                            <h4>温かみのある空間</h4>
-                        </div>
-                        <p>
-                            店内は、心地よい光と自然素材を取り入れたデザインで統一。訪れるすべての人に、リラックスした時間を提供することを目指しています。
-                        </p>
-                    </div>
-                    <img class="pan" src="images/feature-pan.png" alt="">
-                    <img class="cafe" src="images/feature-cafe.png" alt="">
-                </div>
+                </nav>
             </div>
-        </div>
-    </section>
+        </section>
+    </header>
 
-    <!-- リヴィエラのメニュー -->
-    <section class="menu" id="menu">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
+    <main>
+        <!-- ファーストビュー -->
+        <section class="first-view">
+            <div class="fv-wrapper">
+                <div class="fv-inner">
+                    <h2>
+                        都会のオアシス<br>
+                        カフェ・リヴィエラで<br>
+                        心安らぐひとときを
                     </h2>
-                    <h3>MENU</h3>
-                    <p>リヴィエラのメニュー</p>
-                    <p class="intro">
-                        カフェ・リヴィエラのメニューは、季節ごとに変わるこだわりの料理とドリンクを取り揃えています。<br>
-                        すべての料理は、厳選された食材を使用し、手作りで提供しています。
+                    <h3>
+                        自家焙煎のコーヒーと手作りスイーツで、<br>
+                        心地よい時間をお過ごしください
+                    </h3>
+                    <p>
+                        私たちのカフェは、日々の忙しさを忘れ、ゆったりとした時間を楽しむ場所です。洗練された空間で、美味しいコーヒーと共にリラックスしてください。
                     </p>
-                </div>
-                <div class="menu-container">
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu1.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    リヴィエラ特製<br>
-                                    モーニングセット
-                                </h4>
-                            </div>
-                            <p>
-                                新鮮なパン、サラダ、卵料理をお好みで選べる朝のセットメニュー。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu2.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    自家製<br>
-                                    ベーグルサンド
-                                </h4>
-                            </div>
-                            <p>
-                                オーガニック野菜と特製クリームチーズを挟んだ人気のベーグルサンド。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu3.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    オーガニック<br>
-                                    サラダボウル
-                                </h4>
-                            </div>
-                            <p>
-                                地元の新鮮な野菜をたっぷり使用したヘルシーなサラダ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu4.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    リヴィエラ特製<br>
-                                    フレンチトースト
-                                </h4>
-                            </div>
-                            <p>
-                                ふわふわのフレンチトーストに、季節のフルーツとメープルシロップを添えて。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu5.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    クラシック<br>
-                                    シーザーサラダ
-                                </h4>
-                            </div>
-                            <p>
-                                新鮮なロメインレタスとクルトン、パルメザンチーズを使用した定番サラダ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu6.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    本日のスープ
-                                </h4>
-                            </div>
-                            <p>
-                                毎日異なる旬の食材を使った温かいスープ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu7.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    季節のパスタ
-                                </h4>
-                            </div>
-                            <p>
-                                シェフが厳選した旬の食材を使った特製パスタ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu8.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    ハーブチキンのグリル
-                                </h4>
-                            </div>
-                            <p>
-                                ハーブとガーリックでマリネしたチキンをじっくり焼き上げました。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu9.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    リヴィエラ特製<br>
-                                    ハンバーグ
-                                </h4>
-                            </div>
-                            <p>
-                                ジューシーなハンバーグに、特製のデミグラスソースをかけて提供します。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu10.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    カフェ・リヴィエラ<br>
-                                    スペシャルカレー
-                                </h4>
-                            </div>
-                            <p>
-                                スパイスから手作りした本格カレー、季節の野菜をたっぷりと使用。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu11.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    季節のデザートプレート
-                                </h4>
-                            </div>
-                            <p>
-                                旬のフルーツや素材を活かした手作りデザートの盛り合わせ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu12.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    リヴィエラスムージー
-                                </h4>
-                            </div>
-                            <p>
-                                新鮮なフルーツと野菜を使った、ヘルシーでフレッシュなスムージー。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu13.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    自家製レモネード
-                                </h4>
-                            </div>
-                            <p>
-                                レモンをたっぷり使った、自家製の爽やかなレモネード。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu14.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    オーガニック<br>
-                                    ティーセレクション
-                                </h4>
-                            </div>
-                            <p>
-                                世界各国から厳選したオーガニックティーを数種類ご用意しています。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu15.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    ハンドドリップコーヒー
-                                </h4>
-                            </div>
-                            <p>
-                                バリスタが丁寧に淹れる、豊かな香りと深い味わいのハンドドリップコーヒー。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu16.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    季節限定スムージー
-                                </h4>
-                            </div>
-                            <p>
-                                季節ごとに変わる特製スムージー、フレッシュなフルーツを使用。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu17.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    リヴィエラ特製スイーツ
-                                </h4>
-                            </div>
-                            <p>
-                                パティシエが手作りする、季節の素材を使った特製スイーツ。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu18.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    バターチキンカレー
-                                </h4>
-                            </div>
-                            <p>
-                                クリーミーでスパイシーな、リッチな味わいのバターチキンカレー。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu19.png" alt="">
-                            <div class="menu-name">
-                                <img src="images/menu-brown.png" alt="">
-                                <h4>
-                                    自家製ミートパイ
-                                </h4>
-                            </div>
-                            <p>
-                                サクサクのパイ生地に、ジューシーなミートフィリングを詰めた一品。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-content">
-                        <div class="menu-group">
-                            <img src="images/menu20.png" alt="">
-                            <div class="menu-name-brown">
-                                <img src="images/menu-white.png" alt="">
-                                <h4>
-                                    シグネチャー<br>
-                                    アフタヌーンティーセット
-                                </h4>
-                            </div>
-                            <p>
-                                3段のティースタンドに盛りつけられた、スコーン、サンドイッチ、スイーツの贅沢なセット。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 風景 -->
-    <section class="gallery" id="gallery">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
-                    </h2>
-                    <h3>GALLERY</h3>
-                    <p>カフェ・リヴィエラの風景</p>
-                    <p class="intro">
-                        店内や外観、人気メニューの写真をお楽しみください。<br>
-                        私たちのカフェが提供するリラックスした雰囲気を、ぜひ写真で感じ取ってください。
-                    </p>
-                </div>
-                <div class="gallery-container">
-                    <img class="photo1" src="images/gallery1.png" alt="">
-                    <img class="photo2" src="images/gallery2.png" alt="">
-                    <img class="photo3" src="images/gallery3.png" alt="">
-                    <img class="photo4" src="images/gallery4.png" alt="">
-                    <img class="photo5" src="images/gallery5.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ニュース -->
-    <section class="news" id="news">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
-                    </h2>
-                    <h3>NEWS</h3>
-                    <p>最新ニュースとイベント</p>
-                    <p class="intro">
-                        カフェ・リヴィエラの最新情報やイベントをお知らせします。<br>
-                        新メニューや季節限定のイベントなど、お見逃しなく！
-                    </p>
-                </div>
-                <div class="news-container">
-                    <div class="news-content">
-                        <img src="images/news1.png" alt="">
-                        <div class="news-group">
-                            <div class="news-title">
-                                <p>2025.04.01</p>
-                                <h4>新メニュー登場</h4>
-                            </div>
-                            <p>
-                                リヴィエラ特製抹茶ラテが登場しました！<br>
-                                クリーミーでリッチな味わいをぜひお試しください。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <img src="images/news2.png" alt="">
-                        <div class="news-group">
-                            <div class="news-title">
-                                <p>2025.03.31</p>
-                                <h4>イベント情報</h4>
-                            </div>
-                            <p>
-                                ハロウィン特別イベントを開催！<br>
-                                カボチャを使ったスイーツやドリンクが楽しめるこの機会をお見逃しなく。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <img src="images/news3.png" alt="">
-                        <div class="news-group">
-                            <div class="news-title">
-                                <p>2025.03.30</p>
-                                <h4>営業時間延長のお知らせ</h4>
-                            </div>
-                            <p>
-                                11月から平日の営業時間が延長され、夜22時まで営業いたします。
-                                お仕事帰りにぜひお立ち寄りください。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <img src="images/news4.png" alt="">
-                        <div class="news-group">
-                            <div class="news-title">
-                                <p>2025.03.29</p>
-                                <h4>季節限定メニュー</h4>
-                            </div>
-                            <p>
-                                冬限定のホットチョコレートが登場！<br>
-                                濃厚なチョコレートの味わいをお楽しみください。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <img src="images/news5.png" alt="">
-                        <div class="news-group">
-                            <div class="news-title">
-                                <p>2025.03.28</p>
-                                <h4>クリスマス特別コース</h4>
-                            </div>
-                            <p>
-                                12月24日・25日にクリスマス特別コースをご用意しました。<br>
-                                予約はお早めに！
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- アクセス -->
-    <section class="access" id="access">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="heading">
-                    <h2 class="arc-name">
-                        <span class="char1">C</span>
-                        <span class="char2">a</span>
-                        <span class="char3">f</span>
-                        <span class="char4">e</span>
-                        <span class="char5"> </span>
-                        <span class="char6">R</span>
-                        <span class="char7">i</span>
-                        <span class="char8">v</span>
-                        <span class="char9">i</span>
-                        <span class="char10">e</span>
-                        <span class="char11">r</span>
-                        <span class="char12">a</span>
-                    </h2>
-                    <h3>ACCESS</h3>
-                    <p>アクセス方法</p>
-                    <p class="intro">
-                        カフェ・リヴィエラは、東京都新宿区に位置し、アクセスも便利です。<br>
-                        最寄り駅から徒歩5分、専用駐車場もご用意していますので、お車でのご来店も可能です。
-                    </p>
-                </div>
-                <div class="access-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51839.97791333796!2d139.6679976078225!3d35.701651582150596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2059b7fd4b%3A0xec61c68fe232efd2!2z5p2x5Lqs6YO95paw5a6_5Yy6!5e0!3m2!1sja!2sjp!4v1750906907832!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="access-content">
-                        <table>
-                            <tr>
-                                <th>住所</th>
-                                <td>〒123-4567<br class="sp"> 東京都新宿区○○町1-2-3</td>
-                            </tr>
-                            <tr>
-                                <th>電話番号</th>
-                                <td>03-1234-5678</td>
-                            </tr>
-                            <tr>
-                                <th>営業時間</th>
-                                <td>平日：8:00〜20:00、<br class="sp">土日祝：9:00〜22:00</td>
-                            </tr>
-                            <tr>
-                                <th>定休日</th>
-                                <td>毎週火曜日</td>
-                            </tr>
-                            <tr>
-                                <th>メールアドレス</th>
-                                <td>info@cafériviera.jp</td>
-                            </tr>
-                        </table>
-                        <a href="#">
+                    <div class="fv-cta">
+                        <a href="#menu" class="fv-menu-cta">
+                            <img src="images/menu-book.png" alt="">
+                            <p>メニューをみる</p>
+                        </a>
+                        <a href="#reserve" class="fv-reserve-cta">
                             <img src="images/schedule.png" alt="">
                             <p>ご予約</p>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- カフェ・リヴィエラとは？ -->
+        <section class="about" id="about">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>ABOUT</h3>
+                        <p>カフェ・リヴィエラとは？</p>
+                    </div>
+                    <div class="about-container">
+                        <div class="about-content">
+                            <img src="images/about1.png" alt="">
+                            <p>
+                                カフェ・リヴィエラは、都会の喧騒から離れ、穏やかな時間を提供する場所です。木の温もりを感じるインテリアと、ナチュラルな色合いでまとめられた店内は、訪れるすべての人に心の平穏をもたらします。
+                            </p>
+                        </div>
+                        <div class="about-content-right">
+                            <img src="images/about2.png" alt="">
+                            <p>
+                                私たちは、素材にこだわり、シンプルでありながら豊かな味わいを大切にした料理を提供しています。コーヒーはオーガニックの豆を使用し、バリスタが一杯一杯丁寧に淹れています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- こだわり -->
+        <section class="feature" id="feature">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>FEATURE</h3>
+                        <p>カフェ・リヴィエラのこだわり</p>
+                    </div>
+                    <div class="feature-container">
+                        <div class="feature-content">
+                            <div class="feature-group">
+                                <img src="images/feature1.png" alt="">
+                                <h4>新鮮な素材</h4>
+                            </div>
+                            <p>
+                                カフェ・リヴィエラでは、地元の農家から直送される新鮮な食材を使用しています。どのメニューにも、素材本来の味を活かした調理法を取り入れています。
+                            </p>
+                        </div>
+                        <div class="feature-content feature-content-second">
+                            <div class="feature-group">
+                                <img src="images/feature2.png" alt="">
+                                <h4>自家焙煎コーヒー</h4>
+                            </div>
+                            <p>
+                                コーヒー豆は自家焙煎で、最もフレッシュな状態で提供します。豊かな香りと深い味わいを追求し、訪れるたびに新しい発見があります。
+                            </p>
+                        </div>
+                        <div class="feature-content feature-content-third">
+                            <div class="feature-group">
+                                <img src="images/feature3.png" alt="">
+                                <h4>温かみのある空間</h4>
+                            </div>
+                            <p>
+                                店内は、心地よい光と自然素材を取り入れたデザインで統一。訪れるすべての人に、リラックスした時間を提供することを目指しています。
+                            </p>
+                        </div>
+                        <img class="pan" src="images/feature-pan.png" alt="">
+                        <img class="cafe" src="images/feature-cafe.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- リヴィエラのメニュー -->
+        <section class="menu" id="menu">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>MENU</h3>
+                        <p>リヴィエラのメニュー</p>
+                        <p class="intro">
+                            カフェ・リヴィエラのメニューは、季節ごとに変わるこだわりの料理とドリンクを取り揃えています。<br>
+                            すべての料理は、厳選された食材を使用し、手作りで提供しています。
+                        </p>
+                    </div>
+                    <div class="menu-container">
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu1.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        リヴィエラ特製<br>
+                                        モーニングセット
+                                    </h4>
+                                </div>
+                                <p>
+                                    新鮮なパン、サラダ、卵料理をお好みで選べる朝のセットメニュー。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu2.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        自家製<br>
+                                        ベーグルサンド
+                                    </h4>
+                                </div>
+                                <p>
+                                    オーガニック野菜と特製クリームチーズを挟んだ人気のベーグルサンド。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu3.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        オーガニック<br>
+                                        サラダボウル
+                                    </h4>
+                                </div>
+                                <p>
+                                    地元の新鮮な野菜をたっぷり使用したヘルシーなサラダ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu4.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        リヴィエラ特製<br>
+                                        フレンチトースト
+                                    </h4>
+                                </div>
+                                <p>
+                                    ふわふわのフレンチトーストに、季節のフルーツとメープルシロップを添えて。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu5.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        クラシック<br>
+                                        シーザーサラダ
+                                    </h4>
+                                </div>
+                                <p>
+                                    新鮮なロメインレタスとクルトン、パルメザンチーズを使用した定番サラダ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu6.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        本日のスープ
+                                    </h4>
+                                </div>
+                                <p>
+                                    毎日異なる旬の食材を使った温かいスープ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu7.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        季節のパスタ
+                                    </h4>
+                                </div>
+                                <p>
+                                    シェフが厳選した旬の食材を使った特製パスタ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu8.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        ハーブチキンのグリル
+                                    </h4>
+                                </div>
+                                <p>
+                                    ハーブとガーリックでマリネしたチキンをじっくり焼き上げました。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu9.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        リヴィエラ特製<br>
+                                        ハンバーグ
+                                    </h4>
+                                </div>
+                                <p>
+                                    ジューシーなハンバーグに、特製のデミグラスソースをかけて提供します。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu10.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        カフェ・リヴィエラ<br>
+                                        スペシャルカレー
+                                    </h4>
+                                </div>
+                                <p>
+                                    スパイスから手作りした本格カレー、季節の野菜をたっぷりと使用。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu11.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        季節のデザートプレート
+                                    </h4>
+                                </div>
+                                <p>
+                                    旬のフルーツや素材を活かした手作りデザートの盛り合わせ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu12.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        リヴィエラスムージー
+                                    </h4>
+                                </div>
+                                <p>
+                                    新鮮なフルーツと野菜を使った、ヘルシーでフレッシュなスムージー。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu13.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        自家製レモネード
+                                    </h4>
+                                </div>
+                                <p>
+                                    レモンをたっぷり使った、自家製の爽やかなレモネード。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu14.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        オーガニック<br>
+                                        ティーセレクション
+                                    </h4>
+                                </div>
+                                <p>
+                                    世界各国から厳選したオーガニックティーを数種類ご用意しています。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu15.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        ハンドドリップコーヒー
+                                    </h4>
+                                </div>
+                                <p>
+                                    バリスタが丁寧に淹れる、豊かな香りと深い味わいのハンドドリップコーヒー。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu16.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        季節限定スムージー
+                                    </h4>
+                                </div>
+                                <p>
+                                    季節ごとに変わる特製スムージー、フレッシュなフルーツを使用。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu17.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        リヴィエラ特製スイーツ
+                                    </h4>
+                                </div>
+                                <p>
+                                    パティシエが手作りする、季節の素材を使った特製スイーツ。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu18.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        バターチキンカレー
+                                    </h4>
+                                </div>
+                                <p>
+                                    クリーミーでスパイシーな、リッチな味わいのバターチキンカレー。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu19.png" alt="">
+                                <div class="menu-name">
+                                    <img src="images/menu-brown.png" alt="">
+                                    <h4>
+                                        自家製ミートパイ
+                                    </h4>
+                                </div>
+                                <p>
+                                    サクサクのパイ生地に、ジューシーなミートフィリングを詰めた一品。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-group">
+                                <img src="images/menu20.png" alt="">
+                                <div class="menu-name-brown">
+                                    <img src="images/menu-white.png" alt="">
+                                    <h4>
+                                        シグネチャー<br>
+                                        アフタヌーンティーセット
+                                    </h4>
+                                </div>
+                                <p>
+                                    3段のティースタンドに盛りつけられた、スコーン、サンドイッチ、スイーツの贅沢なセット。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 風景 -->
+        <section class="gallery" id="gallery">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>GALLERY</h3>
+                        <p>カフェ・リヴィエラの風景</p>
+                        <p class="intro">
+                            店内や外観、人気メニューの写真をお楽しみください。<br>
+                            私たちのカフェが提供するリラックスした雰囲気を、ぜひ写真で感じ取ってください。
+                        </p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="photo1" src="images/gallery1.png" alt="">
+                        <img class="photo2" src="images/gallery2.png" alt="">
+                        <img class="photo3" src="images/gallery3.png" alt="">
+                        <img class="photo4" src="images/gallery4.png" alt="">
+                        <img class="photo5" src="images/gallery5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ニュース -->
+        <section class="news" id="news">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>NEWS</h3>
+                        <p>最新ニュースとイベント</p>
+                        <p class="intro">
+                            カフェ・リヴィエラの最新情報やイベントをお知らせします。<br>
+                            新メニューや季節限定のイベントなど、お見逃しなく！
+                        </p>
+                    </div>
+                    <div class="news-container">
+                        <div class="news-content">
+                            <img src="images/news1.png" alt="">
+                            <div class="news-group">
+                                <div class="news-title">
+                                    <p>2025.04.01</p>
+                                    <h4>新メニュー登場</h4>
+                                </div>
+                                <p>
+                                    リヴィエラ特製抹茶ラテが登場しました！<br>
+                                    クリーミーでリッチな味わいをぜひお試しください。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <img src="images/news2.png" alt="">
+                            <div class="news-group">
+                                <div class="news-title">
+                                    <p>2025.03.31</p>
+                                    <h4>イベント情報</h4>
+                                </div>
+                                <p>
+                                    ハロウィン特別イベントを開催！<br>
+                                    カボチャを使ったスイーツやドリンクが楽しめるこの機会をお見逃しなく。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <img src="images/news3.png" alt="">
+                            <div class="news-group">
+                                <div class="news-title">
+                                    <p>2025.03.30</p>
+                                    <h4>営業時間延長のお知らせ</h4>
+                                </div>
+                                <p>
+                                    11月から平日の営業時間が延長され、夜22時まで営業いたします。
+                                    お仕事帰りにぜひお立ち寄りください。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <img src="images/news4.png" alt="">
+                            <div class="news-group">
+                                <div class="news-title">
+                                    <p>2025.03.29</p>
+                                    <h4>季節限定メニュー</h4>
+                                </div>
+                                <p>
+                                    冬限定のホットチョコレートが登場！<br>
+                                    濃厚なチョコレートの味わいをお楽しみください。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <img src="images/news5.png" alt="">
+                            <div class="news-group">
+                                <div class="news-title">
+                                    <p>2025.03.28</p>
+                                    <h4>クリスマス特別コース</h4>
+                                </div>
+                                <p>
+                                    12月24日・25日にクリスマス特別コースをご用意しました。<br>
+                                    予約はお早めに！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス -->
+        <section class="access" id="access">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="heading">
+                        <h2 class="arc-name">
+                            <span class="char1">C</span>
+                            <span class="char2">a</span>
+                            <span class="char3">f</span>
+                            <span class="char4">e</span>
+                            <span class="char5"> </span>
+                            <span class="char6">R</span>
+                            <span class="char7">i</span>
+                            <span class="char8">v</span>
+                            <span class="char9">i</span>
+                            <span class="char10">e</span>
+                            <span class="char11">r</span>
+                            <span class="char12">a</span>
+                        </h2>
+                        <h3>ACCESS</h3>
+                        <p>アクセス方法</p>
+                        <p class="intro">
+                            カフェ・リヴィエラは、東京都新宿区に位置し、アクセスも便利です。<br>
+                            最寄り駅から徒歩5分、専用駐車場もご用意していますので、お車でのご来店も可能です。
+                        </p>
+                    </div>
+                    <div class="access-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51839.97791333796!2d139.6679976078225!3d35.701651582150596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2059b7fd4b%3A0xec61c68fe232efd2!2z5p2x5Lqs6YO95paw5a6_5Yy6!5e0!3m2!1sja!2sjp!4v1750906907832!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="access-content">
+                            <table>
+                                <tr>
+                                    <th>住所</th>
+                                    <td>〒123-4567<br class="sp"> 東京都新宿区○○町1-2-3</td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th>
+                                    <td>03-1234-5678</td>
+                                </tr>
+                                <tr>
+                                    <th>営業時間</th>
+                                    <td>平日：8:00〜20:00、<br class="sp">土日祝：9:00〜22:00</td>
+                                </tr>
+                                <tr>
+                                    <th>定休日</th>
+                                    <td>毎週火曜日</td>
+                                </tr>
+                                <tr>
+                                    <th>メールアドレス</th>
+                                    <td>info@cafériviera.jp</td>
+                                </tr>
+                            </table>
+                            <a href="#">
+                                <img src="images/schedule.png" alt="">
+                                <p>ご予約</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer">
