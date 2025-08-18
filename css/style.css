@@ -112,13 +112,13 @@ h2, h3 {
         transform: rotate(-45deg);
     }
     .char2 {
-        transform: rotate(-36deg);
+        transform: rotate(-35deg);
     }
     .char3 {
-        transform: rotate(-27deg);
+        transform: rotate(-26deg);
     }
     .char4 {
-        transform: rotate(-18deg);
+        transform: rotate(-19deg);
     }
     .char5 {
         transform: rotate(-10deg);
@@ -127,7 +127,7 @@ h2, h3 {
         transform: rotate(-2deg);
     }
     .char7 {
-        transform: rotate(7deg);
+        transform: rotate(9deg);
     }
     .char8 {
         transform: rotate(16deg);
@@ -147,6 +147,25 @@ h2, h3 {
 }
 
 
+@media (hover: hover) and (pointer: fine) {
+
+    :is(.menu-cta,
+        .reserve-cta,
+        .sp-menu-cta,
+        .sp-reserve-cta,
+        .fv-menu-cta,
+        .fv-reserve-cta,
+        .sns-text a:hover
+    ):hover {
+        opacity: 0.8;
+    }
+
+    .access-content a:hover{
+        background-color: #715011;
+    }
+}
+
+
 /* ---------------------------------------------------
 PC
 --------------------------------------------------- */
@@ -155,7 +174,7 @@ PC
 /* -----------------------------------------ヘッダー */
 .header-wrapper {
     width: 150px;
-    height: 100vh;
+    height: 1000px;
     position: fixed;
     z-index: 999;
 }
@@ -163,11 +182,10 @@ PC
 .header-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     background-color: var(--white);
-    clip-path: path('M 0 0, L 142 0, L 142 140, L 120 175, L 90 192, L 90 800, L 0 800, Z');
+    clip-path: path('M 0 0, L 142 0, L 142 140, L 120 175, L 90 192, L 90 1000, L 0 1000, Z');
     z-index: 99;
-    position: relative;
 
     > a {
         position: absolute;
@@ -227,6 +245,7 @@ PC
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 99;
 }
 
 .menu-cta,
@@ -238,10 +257,6 @@ PC
     width: 90px;
     padding: 30px 0;
     transition-duration: .4s;
-
-    &:hover {
-        opacity: 0.8;
-    }
 
     img {
         width: 24px;
@@ -344,9 +359,9 @@ PC
         border-radius: 30px;
         transition-duration: .4s;
 
-        &:hover {
+        /* &:hover {
             opacity: 0.8;
-        }
+        } */
 
         img {
             width: 24px;
@@ -375,12 +390,13 @@ PC
 
 /* -----------------------------------------ファーストビュー */
 .first-view {
-    background-image: url(/images/fv-back.jpg);
+    background-image: url(/images/first-view/fv-back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 800px;
+    /* height: 800px; */
+    height: 100vh;
     margin-bottom: 100px;
     position: relative;
 }
@@ -420,7 +436,7 @@ PC
     }
 
     > p {
-        background-image: url(/images/fv-white-back.png);
+        background-image: url(/images/first-view/fv-white-back.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -456,9 +472,9 @@ PC
         border-radius: 30px;
         transition-duration: .4s;
 
-        &:hover {
+        /* &:hover {
             opacity: 0.8;
-        }
+        } */
 
         img {
             width: 24px;
@@ -745,9 +761,9 @@ PC
         padding: 20px 0;
         transition-duration: .3s;
 
-        &:hover {
+        /* &:hover {
             background-color: #715011;
-        }
+        } */
 
         p {
             color: var(--white);
