@@ -1168,6 +1168,10 @@ SP
 
     .access-content {
         width: 100%;
+
+        a {
+            max-width: 345px;
+        }
     }
 
 
