@@ -13,7 +13,7 @@ body {
 }
 
 :root {
-    --brack: #555;
+    --black: #555;
     --white: #fff;
     --dark-brown: #715011;
     --light-brown: #C48E29;
@@ -81,6 +81,25 @@ h2, h3 {
         padding-top: 70px;
         padding-bottom: 20px;
         position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 80px;
+            height: 45px;
+            border-top: 1px solid var(--black);
+            border-bottom: 1px solid var(--black);
+            position: absolute;
+            top: 50%;
+        }
+
+        &::before {
+            transform: translateX(-110%);
+        }
+
+        &::after {
+            transform: translateX(10%);
+        }
     }
 
     p {
@@ -326,7 +345,7 @@ PC
         margin-bottom: 10px;
 
         a {
-            color: var(--brack);
+            color: var(--black);
             font-size: 45px;
             font-family: var(--font-arvo);
             width: 100%;
